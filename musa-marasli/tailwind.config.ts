@@ -8,6 +8,19 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        
+        "shooting-star": {
+          "100%": { transform: "translate(0, 0) rotate(45deg)", opacity: "0" },
+          "70%": { opacity: "1"  },
+          "0%": {
+            transform: "translate(450px, -300px) rotate(45deg)",
+            opacity: "0",
+          },
+        },
+      },animation: {
+        "shooting-star": "shooting-star 50s linear forwards",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
