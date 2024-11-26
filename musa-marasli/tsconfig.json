@@ -11,6 +11,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "types": ["node", "three"],
     "jsx": "preserve",
     "typeRoots": ["node_modules/@types"],
     "incremental": true,

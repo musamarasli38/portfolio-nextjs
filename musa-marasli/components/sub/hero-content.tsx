@@ -9,6 +9,7 @@ import {
 } from "@/../utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroContent = () => {
   return (
@@ -24,7 +25,7 @@ const HeroContent = () => {
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
-            Fullstack Developer Portfolio
+            Fullstack Developer Portfolio under construction
           </h1>
         </motion.div>
 
@@ -33,12 +34,11 @@ const HeroContent = () => {
           className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
           <span>
-            Providing
+            Eager to Create, Learn, and
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
-              the best{" "}
+              Deliver Excellence{" "}
             </span>
-            project exprience
           </span>
         </motion.div>
 
@@ -46,15 +46,19 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
-          Hi, I am Musa Marasli. I&apos;m a Full Stack Software Engineer with
-          experience in Website, Mobile, and Software development. Check out my
-          projects and skills.
+          Hi, I am Musa Marasli. I&apos;m a Full Stack Developer with experience
+          in React.js, Next.js, TypeScript, Tailwind and libraries such as
+          Shadcn or Radix. Check out my projects and skills from my{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+            <Link href="https://github.com/musamarasli38">github profile</Link>
+          </span>
+          .
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
         >
-          Learn More!
+          More Coming Soon
         </motion.a>
       </div>
 

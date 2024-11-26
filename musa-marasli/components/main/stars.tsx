@@ -1,14 +1,15 @@
 "use client";
 
-import React, { useState, useRef, Suspense, ComponentProps } from "react";
+import React, { useState, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
+//@ts-expect-error no types for three
+import * as THREE from "@types/three";
 // @ts-expect-error no types for maath
 import * as random from "maath/random/dist/maath-random.esm";
 
-type StarBackgroundProps = ComponentProps<typeof Points>;
-const StarBackground = (props: StarBackgroundProps) => {
-  const ref: StarBackgroundProps = useRef();
+const StarBackground = (props: React.ComponentProps<typeof Points>) => {
+  const ref = useRef<THREE.Points>(null!);
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(5000), { radius: 1.2 })
   );
@@ -26,7 +27,7 @@ const StarBackground = (props: StarBackgroundProps) => {
           color="$fff"
           size={0.002}
           sizeAttenuation={true}
-          dethWrite={false}
+          depthWrite={false}
         />
       </Points>
     </group>
