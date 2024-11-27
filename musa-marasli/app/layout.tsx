@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import StarsCanvas from "@/../components/main/stars";
 import "./globals.css";
+import Footer from "../components/main/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       >
         <StarsCanvas />
         {children}
+        <Footer />
       </body>
     </html>
   );
